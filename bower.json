@@ -2,7 +2,7 @@
   "name": "stablegrid",
   "version": "0.0.1",
   "main":"stablegrid/stablegrid.css",
-  "keywords"::["angular","grid","not-bootstrap","angular-ui"],
+  "keywords":["angular","grid","not-bootstrap","angular-ui"],
   "ignore": [
       ".gitignore",
       ".jshintignore",
