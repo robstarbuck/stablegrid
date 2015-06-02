@@ -1,0 +1,37 @@
+{
+  "name": "stablegrid",
+  "version": "0.0.1",
+  "main":"stablegrid/stablegrid.css",
+  "keywords"::["angular","grid","not-bootstrap","angular-ui"],
+  "ignore": [
+      ".gitignore",
+      ".jshintignore",
+      ".jshintrc",
+      "_template",
+      "images",
+      "404.html",
+      "index.html",
+      "Gruntfile.js",
+      "bower.json",
+      "gruntfile.js",
+      "package.json",
+      "views"
+  ],
+  "dependencies": {
+    "angular": "^1.3.0",
+    "angular-animate": "^1.3.0",
+    "angular-cookies": "^1.3.0",
+    "angular-resource": "^1.3.0",
+    "angular-route": "^1.3.0",
+    "angular-sanitize": "^1.3.0",
+    "angular-touch": "^1.3.0",
+    "fontawesome": "~4.3.0",
+    "angular-ui-bootstrap": "0.13.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.0",
+    "fontawesome": "~4.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "stablegridApp"
+}

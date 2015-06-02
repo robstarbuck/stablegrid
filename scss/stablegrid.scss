@@ -1,0 +1,702 @@
+@import '_reset.scss';
+@import '_color.scss';
+@import '_properties.scss';
+
+
+html{
+  font-size: 10px;
+}
+body{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+// Content elements
+.cte{
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  &.WdA{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1040px;
+  }
+  &.WdB{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+  }
+  &.WdC{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+}
+
+// Outer table elements, they ensure correct spaceing of the cells accross the table
+.o-tbl{
+  position: relative;
+  clear: both;
+  &.SpcA{
+    margin-left: -1rem;
+    margin-right: -1rem;
+    > .tbl{
+      border-spacing: 1rem 0;
+    }
+  }
+  &.SpcB{
+    margin-left: -2rem;
+    margin-right: -2rem;
+    > .tbl{
+      border-spacing: 2rem 0;
+    }
+  }
+  &.SpcC{
+    margin-left: -3rem;
+    margin-right: -3rem;
+    > .tbl{
+      border-spacing: 3rem 0;
+    }
+  }
+}
+
+// Table elements
+.tbl
+{
+  table-layout: fixed; 
+  display:table;
+  width: 100%;
+  border-spacing: 0;
+  box-sizing:border-box;
+  margin-bottom: 3rem;
+  &.Flr{
+    float: right;
+    width: auto;
+  }
+  &.Fll{
+    float: left;
+    width: auto;
+  }
+  &.Auto{
+    width: auto;
+  }
+  &.Merge{
+
+     > .cll > .btn{
+      border-radius: 0;
+    }
+    > .cll:first-child > .btn{
+      border-top-left-radius: 0.2rem;
+      border-bottom-left-radius: 0.2rem;
+    }
+    > .cll:last-child > .btn{
+      border-top-right-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+    }
+  }
+}
+// Tables within tables should not include a margin bottom
+.tbl .tbl{
+    margin-bottom: 0;
+}
+
+// Cells
+.cll{
+    position: relative;
+    display:table-cell;
+    vertical-align: top;
+    &:first-child > .o-input{
+      > input{
+        border-top-left-radius:0.2rem;
+        border-bottom-left-radius:0.2rem;
+      }
+      &:after{
+        border-bottom-left-radius:0.2rem;
+      }
+    }
+    &:last-child  > .o-input{
+      > input{
+        border-top-right-radius:0.2rem;
+        border-bottom-right-radius:0.2rem;
+      }
+      &:after{
+        border-bottom-right-radius:0.2rem;
+      }
+    }
+}
+
+// Buttons
+.btn{
+  border:0;
+  border-collapse: collapse;
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 4rem;
+  line-height: 4rem;
+  outline: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+  border-radius:0.2rem;
+  text-align: left;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  > *{
+    cursor: pointer;
+  }
+  &:after{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: ' ';
+    display: block;
+    transition: height 100ms;
+    height: 0px;
+    left: 0;
+  }
+  &:hover:after{
+    height: 2px;
+  }
+  &.active:after{
+    height: 4px;
+  }
+  > label{
+    padding: 0 1rem;
+    white-space: nowrap;
+    line-height: inherit;
+    height: inherit;
+    display: table-cell;
+  }
+  &.Default{
+    > .icn{
+      @include grad_h($prime);
+    }
+  }
+  &.Icn,.Icn_ &{
+    padding-right: 4rem;
+    > label{
+      padding-right: 0;
+    }
+    > .icn{
+      padding: 0;
+      width: 4rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      > i{
+        width: inherit;
+      }
+    }
+    &.Lft-{
+      padding-left: 4rem;
+      padding-right: 0;
+      > label{
+        padding-left: 0;
+        padding-right: 1rem;
+      }
+      > .icn{  
+        right: initial;
+        left: 0;
+        top: 0;
+      }
+    }
+    &.Fade-{
+      > .icn > i:first-child{
+        opacity: 0.5;
+      }
+      &.active > .icn > .fa{
+        opacity: 1;
+      }
+      &.active > .icn > .fa:first-child{
+        opacity: 0;
+      }
+      &.Op2-5--{
+        > .icn > i:first-child{
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+  &.c_DarkA,.c_DarkA_ &{
+    background-color:$prime_DarkA;
+    > .icn{
+      @include grad_h($prime_DarkA);
+    }
+  }
+  &.c_DarkB,.c_DarkB_ &{
+    background-color:$prime_DarkB;
+    > .icn{
+      @include grad_h($prime_DarkB);
+    }
+  }
+  &.c_Clear,.c_Clear_ &{
+    background-color: transparent;
+    &:after{
+      border-radius:0 !important;
+    }
+    > label{
+      padding: 0;
+    }
+    > .icn{
+      background: none;
+    }
+  }
+}
+// Icons
+.icn{
+  @include grad_h($prime);
+  height: inherit;
+  line-height: inherit;
+  padding: 0 2rem;
+  position: relative;
+  width: 0px;
+  & > span,
+  & > i{
+    font-size:1.5rem;
+    transition: opacity 200ms;
+    height: inherit;
+    line-height: inherit;
+    opacity: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%; 
+    left: 0; 
+    position: absolute;
+  }
+  & > span{
+    opacity: 1;
+    z-index: 5;
+    color: $Lgt;
+  }
+  & > .fa.Op2-5:first-child{
+    opacity: 0.25;
+  }
+  & > .fa.Op5-0:first-child{
+    opacity: 0.5;
+  }
+  & > .fa:first-child{
+    opacity: 1;
+  }
+  .active & > .fa{
+    opacity: 1;
+  }
+  .active & > .fa:first-child{
+    opacity: 0;
+  }
+  .open > .btn & > .fa{
+    opacity: 1;
+  }
+  .open > .btn & > .fa:first-child{
+    opacity: 0;
+  }
+}
+// Header elements
+.o-h{
+  position: relative;
+  &:after{
+    background-color: white;
+  }
+  &.FsA{
+    height: 6rem;
+    h1,h2,h3,h4,h5,h6{
+      position: absolute;
+      bottom:2rem;
+      font-size: 3rem;
+    }
+    &.Undrl-{
+      margin-bottom: 3rem;
+      &:after{
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  &.FsB{
+    height: 5rem;
+    h1,h2,h3,h4,h5,h6{
+      position: absolute;
+      bottom:2rem;
+      font-size: 2rem;
+    }
+    &.Undrl-{
+      margin-bottom: 3rem;
+      &:after{
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  &.FsC{
+    height: 3rem;
+    h1,h2,h3,h4,h5,h6{
+      position: absolute;
+      bottom:1rem;
+      font-size: 2rem;
+    }
+    &.Undrl-{
+      margin-bottom: 1rem;
+      &:after{
+        display: block;
+        content: ' ';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+// Inputs
+.o-input{
+  overflow:hidden;
+  position: relative;
+  &:after{
+    display: block;
+    width: 100%;
+    height: 0px;
+    background-color: $DK2;
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    transition: height 100ms,background 100ms;
+  }
+  &:hover:after{
+    background-color: $DK4;
+    height: 2px;
+  }
+  &.focus:hover:after,
+  &.focus:after{
+    background-color: $DK2;
+    height: 4px;
+  }
+  input{
+    height: 4rem;
+    line-height: 4rem;
+    width: 100%;
+    display: block;
+    border: 0;
+    outline: 0;
+    padding:0 1rem;
+    background-color: white;
+    position: relative;
+    z-index: 7;
+  }
+}
+
+// Groups
+.grp{
+  margin: 0 -1rem 3rem;
+  padding: 1rem;
+  position: relative;
+}
+
+// Dropdowns
+.o-dropdown{
+  .dropdown-menu{
+    position: absolute;
+    width: 100%;
+    border-bottom-right-radius:0.2rem;
+    border-bottom-left-radius:0.2rem;
+    visibility:hidden;
+    overflow:hidden;
+    max-height: 0rem;
+    transition: max-height 0ms 0ms, visibility 0ms 0ms;
+    border: 0.4rem solid mix($prime,$Drk,80%);
+    .btn:after{
+      content: none;
+    }
+  }
+  > .btn{
+    &:after{
+      height: 2px !important;
+      width: 100% !important;
+      top: initial !important;
+      bottom: 0 !important;
+      height: 0 !important;
+    }
+  }
+  &.open{
+    >.btn{
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      &:after{
+        height: 2px !important;
+      }
+    }
+    .btn{
+      z-index: 10;
+    }
+    .dropdown-menu{
+      transition: max-height 400ms 0ms, visibility 0ms 0ms;
+      visibility:visible;
+      max-height: 1000px;
+      padding-top: 4rem;
+      margin: -4.4rem -0.4rem;
+      border-radius: 0.6rem;
+      li .btn{
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+// Tabs
+
+.tbl{
+
+  &.Tabs-over{
+    margin-bottom: -4rem;
+    border-bottom:4rem;
+    border-style:solid;
+    // #FAIRE Should be able to remove this
+    transition: max-height 0ms;
+    max-height: 0rem;
+    overflow: hidden;
+    display: block;
+    border-color: $LT2;
+    label{
+      position: relative;
+    }
+    > .row.active{
+      display: none !important;
+    }
+    &.open{
+      transition: max-height 400ms;
+      // display: table;
+      max-height: 40rem;
+    }
+  }
+
+  &.Tabs{
+    .btn{
+      padding: 0;
+      border-bottom-right-radius:0;
+      border-bottom-left-radius:0;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      &:after{
+        content: none;
+      }
+      &:hover label:after{
+        height: 2px;
+      }
+    }
+    label{
+      display: block;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .active{
+      display: table-cell !important;
+      .btn{
+        color: $LT2;
+        background: $LT9;
+        label:after{
+          content: none;
+        }
+        > .icn{
+          @include grad_h($LT9);
+        }
+      }
+    }
+  }
+
+  &.Tabs-over .btn:after,
+  &.Tabs .active .btn:after{
+    content:none;
+  }
+
+}
+
+.btn{
+  &.Tabs-options{
+    width: auto;
+    position: absolute;
+    top:1rem;
+    left: 100%;
+    color:inherit;
+    label{
+      display: none;
+    }
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+  }
+}
+
+.Typeahead.o-input{
+  overflow: visible;
+  
+  // These two :after rules are important to ensure that the bottom line doesn't appear at the bottom of the match options
+  &:after{
+    top:3.8rem;
+    transition: top 0ms;
+  }
+  input[aria-expanded="true"]{
+      z-index: 14;
+  }
+  &.focus{
+    input{
+      z-index: 14;
+    }
+    &:after{
+      top:3.6rem !important;
+      bottom: initial;
+      z-index: 15;
+    }
+  }
+  .dropdown-menu{
+    z-index: 12;
+    display: block;
+
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0px;
+    margin: -4.4rem -0.4rem 0px;
+    background-color:$LT4;
+    border: 0.4rem solid $LT4;
+    padding-top: 4rem;
+    border-radius: 0.4rem;
+    visibility: visible;
+    max-height: initial;
+    li{
+      height: 4rem;
+      line-height: 4rem;
+
+      margin-top: 0.4rem;
+      // padding: 0 1rem;
+      &.active .btn{
+        background-color: $prime;
+      }
+    }
+  }
+  &.Hrztal-.o-input .dropdown-menu{
+    // padding-top: 4.4rem;
+    overflow-x: hidden;
+    li{
+      width: auto;
+      display: inline-block;
+      // margin: 0 0.4rem 0 0;
+      margin-right:0.4em; 
+      // margin-top: 0;
+      .btn{
+        border-radius: 0.2rem !important;
+        width: auto;
+      }
+      strong{
+        display: inline-block;
+      }
+    }
+  }
+}
+// Extended options
+
+// Floating Box Model
+.o-box{
+  clear: both;
+  &.SpcA{
+    margin: 0 -1rem;
+    > .box{
+      padding: 0 1rem;
+    }
+  }
+  &.Wd50 > .box{
+    width: 50%;
+  }
+  &.Wd50 > .box{
+    width: 50%;
+  }
+  &.Wd25 > .box{
+    width: 25%;
+  }
+  > .box{
+    float:left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+// Shutter effect
+.tbl{
+  &.Shutter{
+    .cll{
+      vertical-align: middle;
+      .btn{
+        transition: height 100ms,line-height 100ms;
+        vertical-align: middle;
+      }
+    }
+    &.Closed- .cll .btn{
+      height: 0rem;
+      line-height: 0rem;
+    }
+  }
+}
+.cll{
+  &.Matches{
+    &:first-child > .btn > label{
+      padding-left:0.8rem;
+    }
+    > .btn > label{
+      padding: 0 0.8rem;
+      padding-left: 0;
+      &:after{
+        content:',';
+        display: inline;
+      }
+    }
+  }
+}
+
+.Ht25p_ .cll{
+  height: 25%;
+  .icn > i{
+    position: absolute;
+    top: 50%;
+    margin-top: -50%;
+  }
+}
+.Ht33p_ .cll{
+  height: 33%;
+  .icn > i{
+    position: absolute;
+    top: 50%;
+    margin-top: -50%;
+  }
+}
+
+.cll .img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.positionbox{
+  box-sizing:border-box;
+  background-color:gray;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  .o-h{
+    margin-top: -4rem;
+  }
+}
+
+// Important that media files are included at the bottom
+@import '_media.scss';

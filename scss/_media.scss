@@ -1,0 +1,57 @@
+// Default Settings for media
+
+.m_showA{display:none;}
+.m_showB{display:none;}
+.m_showC{display:none;}
+.m_showD{display:none;}
+
+.m_hideA{display:block;}
+.m_hideB{display:block;}
+.m_hideC{display:block;}
+.m_hideD{display:block;}
+
+.m_hideA.tbl{display:table;}
+.m_hideB.tbl{display:table;}
+.m_hideC.tbl{display:table;}
+.m_hideD.tbl{display:table;}
+
+.m_hideA.cll{display:table-cell;}
+.m_hideB.cll{display:table-cell;}
+.m_hideC.cll{display:table-cell;}
+.m_hideD.cll{display:table-cell;}
+
+/* Large Devices, Wide Screens */
+
+/* Prefix xl */
+$class:'';
+@import '__media_rules.scss';
+
+
+$class:'D';
+@media only screen and (max-width : 1200px) {
+	@import '__media_rules.scss';
+}
+
+/* Medium Devices, Desktops */
+/* Prefix lg */
+$class:'C';
+@media only screen and (max-width : 992px) {
+	@import '__media_rules.scss';
+}
+
+/* Small Devices, Tablets */
+/* Prefix md */
+$class:'B';
+@media only screen and (max-width : 768px) {
+	@import '__media_rules.scss';
+}
+
+/* Extra Small Devices, Phones */ 
+/* Prefix sm */ 
+$class:'A';
+@media only screen and (max-width : 480px) {
+	@import '__media_rules.scss';
+}
+
+$class:'';
+@import '__media_rules.scss';

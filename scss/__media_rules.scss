@@ -1,0 +1,114 @@
+.m_show#{$class}{
+	display: block !important;
+}
+.m_show#{$class}.cll{
+	display: table-cell !important;
+}
+.m_hide#{$class}{
+	display: none !important;
+}
+.cll.Wd75p{
+	width:75%;
+}
+
+.tbl{
+	// Exp = Expand
+	// This is the point at which the table will expand to 100% width.
+	
+	&.m_Exp#{$class}{
+		// margin-bottom: 0;
+
+		 > .cll{
+			display: block;
+			width: 100%;
+			margin-bottom: 3rem;
+			&:last-child{
+				margin-bottom: 0rem !important;
+			}
+			/*margin-bottom: 0;*/
+			.btn{
+				&:after {
+					bottom: initial;
+					left: 0;
+					top: 0;
+					width: 0;
+					height: 100%;
+					transition:width 100ms;
+				}
+				&:hover:after {
+					width: 0.2rem;
+				}
+				&.active:after {
+					width: 0.4rem;
+				}
+			}
+			&.Wd75p-{
+				// The immmediate child selector has been deliberately ommited here to ensure inheritance. 
+				 .cll{
+					width:auto;
+				}
+			}
+		}
+		&.Merge{
+			> .cll{
+				margin-bottom: 0;
+			}
+			> .cll > .btn{
+			  border-radius: 0;
+			}
+			> .cll:first-child > .btn{
+			  border-top-right-radius: 0.2rem;
+			  border-top-left-radius: 0.2rem;
+			}
+			> .cll:last-child > .btn{
+			  border-bottom-right-radius: 0.2rem;
+			  border-bottom-left-radius: 0.2rem;
+			}
+		}
+
+		&.MgBA-{
+			// The immmediate child selector has been deliberately ommited here to ensure inheritance. 
+			 .cll{
+				margin-bottom: 1rem;
+			}
+		}
+
+		// This is not a modifier for the Auto class in main and not a modifier of the m_Exp class.
+		&.Auto,&.Fll,&.Flr{
+			width: 100%;
+		}
+	}
+}
+.o-box{
+	&.m_Wd100#{$class} > .box{
+		width: 100%;
+	}
+	&.m_Wd50#{$class} > .box{
+		width: 50%;
+	}
+	&.m_Wd33#{$class} > .box{
+		width: 33.33%;
+	}
+	&.m_Wd25#{$class} > .box{
+		width: 25%;
+	}
+}
+
+// Specific rules for other items.
+
+.Tabs-options.m_Swt#{$class}{
+	margin-top: 0;
+	position: relative;
+	left: initial;
+	top: initial;
+	width: 100%;
+	border-radius:0;
+	 label{
+		display: table-cell;
+	}
+	 > .icn{
+		position: absolute;
+		top:0;
+		right:0;
+	}
+}
