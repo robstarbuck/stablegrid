@@ -1,0 +1,456 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../stablegrid/stablegrid.css">
+
+        <style type="text/css">
+          /* This CSS is included solely for the demo */
+          body{
+            padding: 4rem 2rem;
+          }
+          .block{
+            background-color: gray;
+            text-align: center;
+            color: white;
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 1.5rem;
+            overflow: hidden;
+          }
+          .cname{
+            font-size: 10px;
+            font-weight: bold;
+            opacity: 0.5;
+          }
+          .hidecname .cname{
+            display: none;
+          }
+          .o-h > *{
+            color: white;
+          }
+
+        </style>
+
+    </head>
+
+
+    <body ng-app="stablegridApp" ng-controller="ExtendedCtrl">
+
+      <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- Add your site or application content here -->
+
+      <div class="cte WdB">
+
+        <div class="o-h Undrl- FsA">
+          <h2>Extended Elements Demo</h2>
+        </div>
+
+        <div class="grp c_Drk br1r">
+
+            <div class="o-tbl SpcA">
+              <div class="tbl MgBA- m_ExpB c_Drk_ mg0">
+                <div class="cll">
+                  <button btn-checkbox ng-model="shutteropen" class="btn Icn Lgt2-">
+                    <label><span ng-bind='shutteropen ? "Open":"Close"'></span> <span class="cname">[btn-checkbox]</span></label>
+                    <div class="icn">
+                      <i class="fa fa-square-o"></i>
+                      <i class="fa fa-check-square"></i>
+                    </div>
+                  </button>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="cte WdB">
+        
+        <div class="o-tbl SpcA">
+          <div class="tbl Shutter c_Drk_" ng-class="{'Closed-':shutteropen}">
+            <div class="cll ht4r">
+              <button class="btn">
+                <label>Clear Buttons</label>
+              </button>
+            </div>
+            <div class="cll ht4r">
+              <button class="btn Icn">
+                <label>Clear Buttons</label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll ht4r">
+              <button class="btn Icn">
+                <label>Clear Buttons</label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="o-tbl SpcA">
+          <div class="tbl Auto Shutter c_Drk_" ng-class="{'Closed-':shutteropen}">
+            <div class="cll ht4r">
+              <button class="Lgt2- btn">
+                <label>Clear Buttons</label>
+              </button>
+            </div>
+            <div class="cll ht4r">
+              <button class="Lgt2- btn Icn">
+                <label>Clear Buttons</label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll ht4r">
+              <button class="Lgt2- btn Icn">
+                <label>Clear Buttons</label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-box SpcA Wd25">
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-box.Wd25 .box</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-box.Wd25 .box</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-box.Wd25 .box</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-box.Wd25 .box</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-box SpcA Wd25 m_Wd33C m_Wd50B m_Wd100A">
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-tble</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-tble</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-tble</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll">
+                <div class="block">Float Box <span class="op0-5 cname">.o-tble</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cte WdB">
+        <div class="o-box SpcA Wd25 m_Wd33B m_Wd50A">
+          <div class="box">
+            <div class="tbl">
+              <div class="cll bcLgt">
+                <div class="pd1r"><img class="img" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt=""></div>
+                <div class="pd1r" style="position:relative;">
+                  <div class="positionbox pd1r pdT5r c_Drk_">
+                  
+                    <div class="o-h Undrl- FsC c_Drk">
+                      <h2>Basic Blocks</h2>
+                    </div>
+
+                    <div class="tbl Merge Ht33p_ mg0 m_Exp ht100p">
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.second" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.third" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img" style="visibility:hidden;" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll bcLgt">
+                <div class="pd1r"><img class="img" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt=""></div>
+                <div class="pd1r" style="position:relative;">
+                  <div class="positionbox pd1r pdT5r c_Drk_">
+                  
+                    <div class="o-h Undrl- FsC c_Drk">
+                      <h2>Basic Blocks</h2>
+                    </div>
+
+                    <div class="tbl Merge Ht33p_ mg0 m_Exp ht100p">
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.second" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.third" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img" style="visibility:hidden;" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll bcLgt">
+                <div class="pd1r"><img class="img" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt=""></div>
+                <div class="pd1r" style="position:relative;">
+                  <div class="positionbox pd1r pdT5r c_Drk_">
+                  
+                    <div class="o-h Undrl- FsC c_Drk">
+                      <h2>Basic Blocks</h2>
+                    </div>
+
+                    <div class="tbl Merge Ht33p_ mg0 m_Exp ht100p">
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.second" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.third" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img" style="visibility:hidden;" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll bcLgt">
+                <div class="pd1r"><img class="img" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt=""></div>
+                <div class="pd1r" style="position:relative;">
+                  <div class="positionbox pd1r pdT5r c_Drk_">
+                  
+                    <div class="o-h Undrl- FsC c_Drk">
+                      <h2>Basic Blocks</h2>
+                    </div>
+
+                    <div class="tbl Merge Ht33p_ mg0 m_Exp ht100p">
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.second" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.third" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img" style="visibility:hidden;" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tbl">
+              <div class="cll bcLgt">
+                <div class="pd1r"><img class="img" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt=""></div>
+                <div class="pd1r" style="position:relative;">
+                  <div class="positionbox pd1r pdT5r c_Drk_">
+                  
+                    <div class="o-h Undrl- FsC c_Drk">
+                      <h2>Basic Blocks</h2>
+                    </div>
+
+                    <div class="tbl Merge Ht33p_ mg0 m_Exp ht100p">
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.second" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.third" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cll">
+                        <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn ht100p">
+                          <label>Check <span class="cname">[btn-checkbox]</span></label>
+                          <div class="icn ht100p">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-plus-square"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img" style="visibility:hidden;" src="http://imagizer.imageshack.us/v2/600x600q90/c/r/673/ST7ITL.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <script id="template/typeahead/typeahead-match.html" type="text/ng-template">
+
+        <a class="btn {{match.model.oclass}}" tabindex="-1"><label bind-html-unsafe="match.label"></label> </a>
+
+      </script>
+
+      <script id="template/typeahead/typeahead-popup.html" type="text/ng-template">
+
+        <ul class="dropdown-menu" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;" role="listbox" aria-hidden="{{!isOpen()}}">
+            <li ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{match.id}}">
+                <div typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+            </li>
+        </ul>
+
+      </script>
+          
+      <!-- End Content -->
+
+      <script src="scripts/vendor.js"></script>
+
+      <script src="scripts/scripts.js"></script>
+    </body>
+</html>

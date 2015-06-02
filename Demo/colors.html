@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../stablegrid/stablegrid.css">
+
+        <style type="text/css">
+          /* This */
+          body{
+            padding: 4rem 2rem;
+          }
+          .block{
+            background-color: gray;
+            text-align: center;
+            color: white;
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 1.5rem;
+            overflow: hidden;
+          }
+          .cname{
+            font-size: 10px;
+            font-weight: bold;
+            opacity: 0.5;
+          }
+          .hidecname .cname{
+            display: none;
+          }
+          .o-h > *{
+            color: white;
+          }
+
+        </style>
+
+    </head>
+    <body ng-app="stablegridApp" ng-controller="ColorsCtrl">
+
+      <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- Add your site or application content here -->
+
+      <div class="cte WdB">
+
+        <div class="o-h Undrl- FsA">
+          <h2>Colours Demo</h2>
+        </div>
+
+        <div class="o-tbl SpcA">
+          <div class="tbl">
+            <div class="cll Icn_" ng-repeat="class in colours" ng-class="class.classname">
+              <button ng-repeat="modifier in class.modifiers" class="btn" ng-class="modifier.val">
+                <label>Button <span class="cname"><span ng-bind="'.'+class.classname"></span><span ng-bind="'.'+modifier.val"></span></span></label>
+                <div class="icn">
+                  <i class="fa fa-square"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script id="template/typeahead/typeahead-match.html" type="text/ng-template">
+
+        <a class="btn {{match.model.oclass}}" tabindex="-1"><label bind-html-unsafe="match.label"></label> </a>
+
+      </script>
+
+      <script id="template/typeahead/typeahead-popup.html" type="text/ng-template">
+
+        <ul class="dropdown-menu" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;" role="listbox" aria-hidden="{{!isOpen()}}">
+            <li ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{match.id}}">
+                <div typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+            </li>
+        </ul>
+
+      </script>
+          
+      <!-- End Content -->
+
+      <script src="scripts/vendor.js"></script>
+
+      <script src="scripts/scripts.js"></script>
+    </body>
+</html>
