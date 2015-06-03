@@ -122,11 +122,7 @@ $prime_DarkB:mix($LT1,$prime,40%);
 	}
 }
 
-body{
-	background-color: $LT2;
-}
-
-a,button{
+button.btn{
 	background-color: $prime;
 	color: #000;
 }

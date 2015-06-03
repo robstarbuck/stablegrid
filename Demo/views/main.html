@@ -1,0 +1,985 @@
+<div ng-class="{'hidecname':hidecname}"role="">
+  <div class="cte WdB">
+
+    <div class="grp c_Drk br1r">
+
+        <div class="o-tbl SpcA">
+          <div class="tbl MgBA- m_ExpB c_Drk_ mg0">
+            <div class="cll">
+              <button btn-checkbox ng-model="hidecname" class="btn Icn Lgt2-">
+                <label>Hide Class Names <span class="cname">[btn-checkbox]</span></label>
+                <div class="icn">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll o-dropdown c_Drk_" dropdown>
+
+             <button class="btn Icn Lgt2-" dropdown-toggle ng-disabled="disabled">
+               <label>Show Examples? <span class="cname">[dropdown]</span></label>
+               <div class="icn">
+                 <i class="fa fa-caret-down"></i>
+                 <i class="fa fa-chevron-down"></i>
+               </div>
+             </button>
+
+             <ul class="dropdown-menu c_Lgt" role="menu" ng-click="$event.stopPropagation();">
+               <li ng-repeat="option in viewOptions">
+                <a href="javascript:null" btn-checkbox ng-model="option.show" class="btn Op2-5-- Fade- Icn Lgt2-">
+                  <label ng-bind="option.title"></label>
+                  <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[0].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Basic Blocks</h2>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl">
+        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tble</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tble</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl">
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcB">
+      <div class="tbl">
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcC">
+      <div class="tbl">
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[1].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Media Width Blocks</h2>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl MgBA- m_ExpD">
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpD</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpD</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl MgBA- m_ExpC">
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpC</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpC</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpC</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcB">
+      <div class="tbl MgBA- m_ExpB">
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcC">
+      <div class="tbl  MgBA- m_ExpA">
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpA</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpA</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpA</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpA</span></div></div>
+        <div class="cll"><div class="block">Expand <span class="cname">.tbl.MgBA-.m_ExpA</span></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[2].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Nested Blocks</h2>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl m_ExpC">
+
+        <div class="cll">
+
+          <div class="o-tbl SpcA">
+            <div class="tbl  MgBA- m_ExpC">
+              <div class="cll"><div class="block">Nested <span class="cname">.tbl.MgBA-.m_ExpC</span></div></div>
+              <div class="cll"><div class="block">Nested <span class="cname">.tbl.MgBA-.m_ExpC</span></div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cll">
+
+          <div class="o-tbl SpcA">
+            <div class="tbl m_ExpB">
+              <div class="cll"><div class="block">Nested <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+              <div class="cll"><div class="block">Nested <span class="cname">.tbl.MgBA-.m_ExpB</span></div></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[3].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Set Width Blocks</h2>
+    </div>
+    <div class="o-tbl SpcA">
+      <div class="tbl MgBA- m_ExpC">
+
+        <div class="cll Wd75p">
+
+          <div class="o-tbl SpcA">
+            <div class="tbl m_ExpC">
+              <div class="cll"><div class="block">Set Width <span class="cname">.cll.Wd75p</span></div></div>
+              <div class="cll"><div class="block">Set Width <span class="cname">.cll.Wd75p</span></div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cll">
+
+          <div class="o-tbl SpcA">
+            <div class="tbl m_ExpB">
+              <div class="cll"><div class="block">Set Width</div></div>
+              <div class="cll"><div class="block">Set Width</div></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[4].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Basic Buttons</h2>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl Auto">
+        <div class="cll">
+          <button class="btn">
+            <label>Button <span class="cname">.btn</span></label>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <div class="icn">
+              <i class="fa fa-arrow-up"></i>
+
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <label>Icon (see left) <span class="cname">.btn > .icn</span></label>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl Auto Icn_">
+        <div class="cll">
+          <button class="btn">
+            <label>Button+Icon <span class="cname">.Icn.btn</span></label>
+            <div class="icn">
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Lft-">
+            <div class="icn">
+              <i class="fa fa-arrow-left"></i>
+            </div>
+            <label>Button+Icon <span class="cname">.Lft-.Icn.btn</span></label>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl Auto Icn_">
+        <div class="cll">
+          <button class="btn">
+            <label>Numbered Icon <span class="cname">.Icn</span></label>
+            <div class="icn">
+              <i class="fa fa-square fs2r"></i>
+              <i class="fa fa-check"></i>
+              <span>1</span>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <label>Alpha. Icon <span class="cname">.Icn</span></label>
+            <div class="icn">
+              <i class="fa fa-square fs2r"></i>
+              <i class="fa fa-check"></i>
+              <span>A</span>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Lft-">
+            <div class="icn">
+              <i class="fa fa-square fs2r"></i>
+              <i class="fa fa-check"></i>
+              <span>Z</span>
+            </div>
+            <label>Alpha. Icon <span class="cname">.Lft- .Icn</span></label>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl Fll MgBA- m_ExpA">
+        <div class="cll">
+          <button class="btn Lft- Icn">
+            <label>Float <span class="cname">.tbl.Fll.m_ExpA</span></label>
+            <div class="icn">
+              <i class="fa fa-arrow-left"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="tbl Flr MgBA- m_ExpA">
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Float <span class="cname">.tbl.Flr.m_ExpA</span></label>
+            <div class="icn">
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <label>Float <span class="cname">.tbl.Flr.m_ExpA</span></label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl SpcA">
+      <div class="tbl c_Clear_">
+        <div class="cll">
+          <button class="btn">
+            <label>Clear Buttons</label>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Clear Buttons</label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Clear Buttons</label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="o-tbl SpcA">
+      <div class="tbl c_Clear_ c_Drk_">
+        <div class="cll">
+          <button class="btn">
+            <label>Clear Buttons</label>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Clear Buttons</label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Clear Buttons</label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+      <div class="cte WdB" ng-show="viewOptions[5].show">
+
+        <div class="o-h Undrl- FsA">
+          <h2>Button Sets</h2>
+        </div>
+
+        <div class="o-tbl SpcA">
+          <div class="tbl">
+            <div class="cll">
+              <button class="btn">
+                <label>Basic <span class="cname">.tbl</span></label>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn">
+                <label>Basic <span class="cname">.tbl</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn">
+                <label>Basic <span class="cname">.tbl</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-tbl">
+          <div class="tbl Merge">
+            <div class="cll">
+              <button class="btn">
+                <label>Merge <span class="cname">tbl Merge</span></label>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn">
+                <label>Merge <span class="cname">tbl Merge</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn">
+                <label>Merge <span class="cname">tbl Merge</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="SpcA o-tbl">
+          <div class="tbl c_A_">
+            <div class="cll">
+              <button class="btn Drk2-">
+                <label>Colour <span class="cname">.c_A_ .Drk2-</span></label>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn Drk2-">
+                <label>Colour <span class="cname">.c_A_ .Drk2-</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="btn Icn Drk2-">
+                <label>Colour <span class="cname">.c_A_ .Drk2-</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="SpcA o-tbl">
+          <div class="tbl c_A_">
+            <div class="cll">
+              <button class="btn Drk4-">
+                <label>Colour <span class="cname">.c_A_ .Drk4-</span></label>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="Icn btn Drk4-">
+                <label>Colour <span class="cname">.c_A_ .Drk4-</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button class="Icn btn Drk4-">
+                <label>Colour <span class="cname">.c_A_ .Drk4-</span></label>
+                <div class="icn">
+                  <i class="fa fa-shield"></i>
+                  <i class="fa fa-check"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="cte WdB" ng-show="viewOptions[6].show">
+
+        <div class="o-h Undrl- FsA">
+          <h2>Radio Buttons</h2>
+        </div>
+
+        <div class="o-tbl SpcA">
+          <div class="tbl">
+            <div class="cll">
+              <button btn-radio="'Lft'" ng-model="radios" class="btn Icn">
+                <label>Radio <span class="cname">[btn-radio]</span></label>
+                <div class="icn">
+                  <i class="fa fa-circle-o"></i>
+                  <i class="fa fa-circle"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-radio="'Mid'" ng-model="radios" class="btn Icn">
+                <label>Radio <span class="cname">[btn-radio]</span></label>
+                <div class="icn">
+                  <i class="fa fa-circle-o"></i>
+                  <i class="fa fa-circle"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-radio="'Rgt'" ng-model="radios" class="btn Icn">
+                <label>Radio <span class="cname">[btn-radio]</span></label>
+                <div class="icn">
+                  <i class="fa fa-circle-o"></i>
+                  <i class="fa fa-circle"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-tbl SpcA">
+          <div class="tbl Icn_">
+            <div class="cll">
+              <button btn-radio="'Lft'" ng-model="radios"  class="Fade- btn">
+                <label>Radio <span class="cname">.Fade-</span></label>
+                <div class="icn">
+                  <i class="fa fa-square fs2r"></i>
+                  <i class="fa fa-square fs2r"></i>
+                  <span>A</span>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-radio="'Mid'" ng-model="radios"  class="Fade- btn">
+                <label>Radio <span class="cname">.Fade-</span></label>
+                <div class="icn">
+                  <i class="fa fa-square fs2r"></i>
+                  <i class="fa fa-square fs2r"></i>
+                  <span>A</span>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-radio="'Rgt'" ng-model="radios"  class="Fade- btn">
+                <label>Radio <span class="cname">.Fade-</span></label>
+                <div class="icn">
+                  <i class="fa fa-square fs2r"></i>
+                  <i class="fa fa-square fs2r"></i>
+                  <span>A</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-tbl SpcA">
+          <div class="tbl">
+            <div class="cll">
+              <button btn-checkbox ng-model="checkboxes.first" class="btn Icn">
+                <label>Check <span class="cname">[btn-checkbox]</span></label>
+                <div class="icn">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-checkbox ng-model="checkboxes.second" class="btn Icn">
+                <label>Check <span class="cname">[btn-checkbox]</span></label>
+                <div class="icn">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-checkbox ng-model="checkboxes.third" class="btn Icn">
+                <label>Check <span class="cname">[btn-checkbox]</span></label>
+                <div class="icn">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </button>
+            </div>
+            <div class="cll">
+              <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn">
+                <label>Check <span class="cname">[btn-checkbox]</span></label>
+                <div class="icn">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grp">
+
+          <div class="o-tbl SpcA">
+            <div class="tbl mg0 m_ExpB MgBA-">
+              <div class="cll">
+                <button btn-checkbox ng-model="checkboxes.first" class="btn Icn">
+                  <label>Check <span class="cname">[btn-checkbox]</span></label>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-plus-square"></i>
+                  </div>
+                </button>
+              </div>
+              <div class="cll">
+                <button btn-checkbox ng-model="checkboxes.second" class="btn Icn">
+                  <label>Check <span class="cname">[btn-checkbox]</span></label>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-plus-square"></i>
+                  </div>
+                </button>
+              </div>
+              <div class="cll">
+                <button btn-checkbox ng-model="checkboxes.third" class="btn Icn">
+                  <label>Check <span class="cname">[btn-checkbox]</span></label>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-plus-square"></i>
+                  </div>
+                </button>
+              </div>
+              <div class="cll">
+                <button btn-checkbox ng-model="checkboxes.fourth" class="btn Icn">
+                  <label>Check <span class="cname">[btn-checkbox]</span></label>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-plus-square"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="cte WdB" ng-show="viewOptions[7].show">
+
+        <div class="o-h Undrl- FsA">
+          <h2>Dropdown Elements</h2>
+        </div>
+
+        <div class="o-tbl SpcA">
+         <div class="tbl m_ExpB">
+
+           <div class="cll o-dropdown" dropdown>
+
+             <button class="btn Icn" dropdown-toggle ng-disabled="disabled">
+               <label><span  ng-bind="ddOptions1"></span> <span class="cname">[dropdown]</span></label>
+               <div class="icn">
+                 <i class="fa fa-caret-down"></i>
+                 <i class="fa fa-chevron-down"></i>
+               </div>
+             </button>
+
+             <ul class="dropdown-menu" role="menu">
+              <li><a href="javascript:null" ng-model="ddOptions1" btn-radio="'Option A'" class="btn Op2-5-- Fade- Icn"><label>Option A</label>
+                <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+              </li>
+              <li><a href="javascript:null" ng-model="ddOptions1" btn-radio="'Option B'" class="btn Op2-5-- Fade- Icn"><label>Option B</label>
+                <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+              </li>
+              <li><a href="javascript:null" ng-model="ddOptions1" btn-radio="'Option C'" class="btn Op2-5-- Fade- Icn"><label>Option C</label>
+                <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+              </li>
+              <li><a href="javascript:null" ng-model="ddOptions1" btn-radio="'Option D'" class="btn Op2-5-- Fade- Icn"><label>Option D</label>
+                <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="cll o-dropdown c_Drk_" dropdown is-open="status.isopen">
+
+           <button class="btn Icn" dropdown-toggle ng-disabled="disabled">
+             <label>Multi-select <span class="cname">[dropdown]</span></label>
+             <div class="icn">
+               <i class="fa fa-caret-down"></i>
+               <i class="fa fa-chevron-down"></i>
+             </div>
+           </button>
+
+           <ul class="dropdown-menu c_Lgt" role="menu" ng-click="$event.stopPropagation();">
+             <li><a href="javascript:null" btn-checkbox ng-model="ddOptions2.one" class="btn Op2-5-- Fade- Icn"><label>Option A</label>
+               <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+             </li>
+             <li><a href="javascript:null" btn-checkbox ng-model="ddOptions2.two" class="btn Op2-5-- Fade- Icn"><label>Option B</label>
+               <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+             </li>
+             <li><a href="javascript:null" btn-checkbox ng-model="ddOptions2.three" class="btn Op2-5-- Fade- Icn"><label>Option C</label>
+               <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+             </li>
+             <li><a href="javascript:null" btn-checkbox ng-model="ddOptions2.four" class="btn Op2-5-- Fade- Icn"><label>Option D</label>
+               <div class="icn"><i class="fa fa-square"></i><i class="fa fa-check-square"></i></div></a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="cte WdB" ng-show="viewOptions[8].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Inputs with Buttons</h2>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl Merge">
+        <div class="cll">
+          <div class="o-input" ng-class="{'focus':fcs1}"><input ng-focus="fcs1=1" ng-blur="fcs1=0" type="text" placeholder=".o-input > input"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl Auto Merge">
+        <div class="wd100p cll">
+          <div class="o-input" ng-class="{'focus':fcs2}"><input ng-focus="fcs2=1" ng-blur="fcs2=0" type="text" placeholder=".o-input > input"></div>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <label>Button <span class="cname">.btn</span></label>
+          </button>
+        </div>
+        <div class="cll">
+          <button class="btn">
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="o-tbl c_Lgt_">
+      <div class="tbl Auto Merge">
+        <div class="cll wd100p">
+          <div class="o-input" ng-class="{'focus':fcs3}"><input ng-focus="fcs3=1" ng-blur="fcs3=0" type="text" placeholder=".c_Lgt_"></div>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Button <span class="cname">.c_Lgt_</span></label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="o-tbl">
+      <div class="tbl Auto Merge">
+        <div class="cll wd75p">
+          <div class="o-input" ng-class="{'focus':fcs4}"><input ng-focus="fcs4=1" ng-blur="fcs4=0" type="text" placeholder=".o-input > input"></div>
+        </div>
+        <div class="cll wd25p">
+          <div class="o-input Drk1- c_Lgt" ng-class="{'focus':fcs5}"><input ng-focus="fcs5=1" ng-blur="fcs5=0" type="text" placeholder=".o-input > input"></div>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Button <span class="cname">.btn.Icn</span></label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cte WdB" ng-show="viewOptions[9].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Tabs</h2>
+    </div>
+
+    <div class="grp c_Drk">
+
+      <button class="btn Tabs-options m_SwtC c_Drk" ng-click="showOtherTabs=!showOtherTabs">
+        <label>Other Searches</label>
+        <div class="icn">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </button>
+
+      <div class="o-tbl Show3 m_BhvA">
+
+        <!-- [Tabs-over] This is where the overflow from the visible tabs will live -->
+        <div class="tbl Tabs-over" ng-class="{'open':showOtherTabs}">
+          <div ng-repeat="tab in tabArray" ng-model="$parent.tabs" class="row" ng-click="swapModel($index)" ng-hide="tab.ind == $parent.tabs.ind" ng-class="{'m_showA':hideClass($index,4)}">
+            <button class="btn Icn c_Drk">
+              <label><span ng-bind="tab.val"></span><span class="cname"></span></label>
+              <div class="icn">
+                <i class="fa fa-caret-up"></i>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- [/Tabs-over] -->
+
+        <div class="tbl Tabs mg0">
+          <div ng-repeat="tab in tabArray | limitTo : 4 " btn-radio="tab" ng-model="$parent.tabs" class="cll m_hideA">
+            <button class="btn Icn c_Drk Lgt3-">
+              <label><span ng-bind="tab.val"></span><span class="cname">.btn.Icn</span></label>
+              <div class="icn">
+                <i class="fa fa-caret-up"></i>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </button>
+          </div>
+          <div class="cll wd150x">
+            <button class="btn Icn c_A">
+              <label>Fixed <span class="cname">.btn.Icn</span></label>
+              <div class="icn">
+                <i class="fa fa-plus-square"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mgLR1r">
+        <div class="grp pd2r mgB0">
+          <div class="o-tbl SpcB">
+            <div class="tbl mg0">
+              <div class="cll">
+                <div class="block"><span ng-bind="tabs.val"></span> Contents</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Start of Grid Extended -->
+
+
+<script id="template/typeahead/typeahead-match.html" type="text/ng-template">
+
+  <a class="btn {{match.model.oclass}}" tabindex="-1"><label bind-html-unsafe="match.label"></label> </a>
+
+</script>
+
+<script id="template/typeahead/typeahead-popup.html" type="text/ng-template">
+
+  <ul class="dropdown-menu" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;" role="listbox" aria-hidden="{{!isOpen()}}">
+      <li ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{match.id}}">
+          <div typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+      </li>
+  </ul>
+
+</script>
+
+  <div class="cte WdB" ng-show="viewOptions[11].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Typeahead</h2>
+    </div>
+
+    <div class="o-tbl m_showB ofH">
+      <div class="tbl Auto Merge c_Lgt_">
+        <div class="cll Matches" ng-repeat="match in matches">
+          <button class="btn Drk1-">
+            <label ng-bind="match"></label>
+          </button>
+        </div>
+        <div class="cll wd100p bcLgt9"></div>
+        <div class="cll">
+          <button class="btn Drk1-">
+            <div class="icn">
+        
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl Auto Merge">
+        <div class="cll Matches m_hideB c_Lgt_" ng-repeat="match in matches">
+          <button class="btn Drk1-">
+            <label ng-bind="match"></label>
+          </button>
+        </div>
+        <div class="cll wd100p c_Drk_">
+          <div class="o-input Typeahead m_bdL0-2rB" ng-class="{'focus':fcs1}">
+            <!-- http://plnkr.co/edit/q0cthGrC7h90GCoMd8ml?p=preview -->
+
+            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | filter:$viewValue | limitTo:8"
+              placeholder=".Typeahead.o-input [typeahead]" type="text"
+              ng-change="clearModel(selected2)"
+              ng-keydown="removeLast($event,selected2)"
+              ng-model="selected2"
+              ng-focus="fcs1=1" ng-blur="fcs1=0" >
+
+          </div>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Button <span class="cname">.btn.Icn</span></label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[11].show">
+
+    <div class="o-h Undrl- FsA">
+      <h2>Typeahead Horizontal</h2>
+    </div>
+
+    <div class="o-tbl m_showB ofH">
+      <div class="tbl Auto Merge c_Lgt_">
+        <div class="cll Matches" ng-repeat="match in matches">
+          <button class="btn Drk1-">
+            <label ng-bind="match"></label>
+          </button>
+        </div>
+        <div class="cll wd100p bcLgt9"></div>
+        <div class="cll">
+          <button class="btn Drk1-">
+            <div class="icn">
+        
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl Auto Merge">
+        <div class="cll Matches m_hideB c_Lgt_" ng-repeat="match in matches">
+          <button class="btn Drk1-">
+            <label ng-bind="match"></label>
+          </button>
+        </div>
+        <div class="cll wd100p">
+          <div class="o-input Hrztal- Typeahead m_bdL0-2rB c_Lgt_" ng-class="{'focus':fcs2}">
+            <!-- http://plnkr.co/edit/q0cthGrC7h90GCoMd8ml?p=preview -->
+
+            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | filter:$viewValue | limitTo:8"
+              placeholder=".Hrztal-.Typeahead.o-input [typeahead]" type="text"
+              ng-change="clearModel(selected)"
+              ng-keydown="removeLast($event,selected)"
+              ng-model="selected"
+              ng-focus="fcs2=1" ng-blur="fcs2=0" >
+
+          </div>
+        </div>
+        <div class="cll">
+          <button class="btn Icn">
+            <label>Button <span class="cname">.btn.Icn</span></label>
+            <div class="icn">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
