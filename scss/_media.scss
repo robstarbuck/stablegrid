@@ -21,37 +21,77 @@
 .m_hideD.cll{display:table-cell;}
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : $btnHtSwitchWd) {
+
+	.btn{
+	  height: #{$btnHtB}rem;
+	  line-height: #{$btnHtB}rem;
+	}
+	.o-input{
+	  input{
+	    height: #{$btnHtB}rem;
+	    line-height: #{$btnHtB}rem;
+	  }
+	}
+	.o-dropdown{
+	  &.open{
+	    .dropdown-menu{
+	      padding-top: #{$btnHtB}rem;
+	      margin: -#{$btnHtB}.4rem -0.4rem;
+	    }
+	  }
+	}
+	.Typeahead.o-input{
+	  &:after{
+	    top:#{$btnHtB - 0.2}rem;
+	  }
+	  &.focus{
+	    &:after{
+	      top:#{$btnHtB - 0.4}rem !important;
+	    }
+	  }
+	  .dropdown-menu{
+	    margin: -#{$btnHtB}.4rem -0.4rem 0px;
+	    padding-top: #{$btnHtB}rem;
+	    li{
+	      height: #{$btnHtB}rem;
+	      line-height: #{$btnHtB}rem;
+	    }
+	  }
+	}
+
+}
 
 /* Prefix xl */
 $class:'';
-@import '__media_rules.scss';
+@import '_media_rules.scss';
 
 
 $class:'D';
-@media only screen and (max-width : 1200px) {
-	@import '__media_rules.scss';
+@media only screen and (max-width : $wdD) {
+	@import '_media_rules.scss';
 }
 
 /* Medium Devices, Desktops */
 /* Prefix lg */
 $class:'C';
-@media only screen and (max-width : 992px) {
-	@import '__media_rules.scss';
+@media only screen and (max-width : $wdC) {
+	@import '_media_rules.scss';
 }
 
 /* Small Devices, Tablets */
 /* Prefix md */
 $class:'B';
-@media only screen and (max-width : 768px) {
-	@import '__media_rules.scss';
+@media only screen and (max-width : $wdB) {
+	@import '_media_rules.scss';
 }
 
 /* Extra Small Devices, Phones */ 
 /* Prefix sm */ 
 $class:'A';
-@media only screen and (max-width : 480px) {
-	@import '__media_rules.scss';
+@media only screen and (max-width : $wdA) {
+	@import '_media_rules.scss';
 }
 
 $class:'';
-@import '__media_rules.scss';
+@import '_media_rules.scss';

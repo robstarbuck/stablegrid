@@ -1,3 +1,30 @@
+// Default settings
+
+$wdA:480px;
+$wdB:768px;
+$wdC:992px;
+$wdD:1200px;
+
+$Lgt:#FFFCF6;
+$Drk:#000000;
+
+$c_A:#009a66;
+$c_B:#005689;
+$c_C:#FFAA00;
+
+$wdA:480px;
+$wdB:768px;
+$wdC:992px;
+$wdD:1200px;
+
+$btnHt:5;
+$btnHtSwitchWd:$wdB;
+$btnHtB:7;
+
+@import '../vars.scss';
+
+@import 'mixins.scss';
+
 @import '_reset.scss';
 @import '_color.scss';
 @import '_properties.scss';
@@ -16,6 +43,12 @@ body{
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  // clear: both
   &.WdA{
     margin-left: auto;
     margin-right: auto;
@@ -77,6 +110,14 @@ body{
     float: left;
     width: auto;
   }
+  &.Flr:after,&.Fll:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
   &.Auto{
     width: auto;
   }
@@ -131,8 +172,8 @@ body{
   border-collapse: collapse;
   display: inline-block;
   font-size: 1.5rem;
-  height: 4rem;
-  line-height: 4rem;
+  height: #{$btnHt}rem;
+  line-height: #{$btnHt}rem;
   outline: 0;
   overflow: hidden;
   padding: 0;
@@ -169,11 +210,6 @@ body{
     line-height: inherit;
     height: inherit;
     display: table-cell;
-  }
-  &.Default{
-    > .icn{
-      @include grad_h($prime);
-    }
   }
   &.Icn,.Icn_ &{
     padding-right: 4rem;
@@ -220,34 +256,9 @@ body{
       }
     }
   }
-  &.c_DarkA,.c_DarkA_ &{
-    background-color:$prime_DarkA;
-    > .icn{
-      @include grad_h($prime_DarkA);
-    }
-  }
-  &.c_DarkB,.c_DarkB_ &{
-    background-color:$prime_DarkB;
-    > .icn{
-      @include grad_h($prime_DarkB);
-    }
-  }
-  &.c_Clear,.c_Clear_ &{
-    background-color: transparent;
-    &:after{
-      border-radius:0 !important;
-    }
-    > label{
-      padding: 0;
-    }
-    > .icn{
-      background: none;
-    }
-  }
 }
 // Icons
 .icn{
-  @include grad_h($prime); /* W3C */
   height: inherit;
   line-height: inherit;
   padding: 0 2rem;
@@ -270,7 +281,6 @@ body{
   & > span{
     opacity: 1;
     z-index: 5;
-    color: $Lgt;
   }
   & > .fa.Op2-5:first-child{
     opacity: 0.25;
@@ -358,6 +368,7 @@ body{
     }
   }
 }
+
 // Inputs
 .o-input{
   overflow:hidden;
@@ -384,8 +395,8 @@ body{
     height: 4px;
   }
   input{
-    height: 4rem;
-    line-height: 4rem;
+    height: #{$btnHt}rem;
+    line-height: #{$btnHt}rem;
     width: 100%;
     display: block;
     border: 0;
@@ -415,7 +426,6 @@ body{
     overflow:hidden;
     max-height: 0rem;
     transition: max-height 0ms 0ms, visibility 0ms 0ms;
-    border: 0.4rem solid mix($prime,$Drk,80%);
     .btn:after{
       content: none;
     }
@@ -430,6 +440,7 @@ body{
     }
   }
   &.open{
+    z-index: 10;
     >.btn{
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -444,8 +455,8 @@ body{
       transition: max-height 400ms 0ms, visibility 0ms 0ms;
       visibility:visible;
       max-height: 1000px;
-      padding-top: 4rem;
-      margin: -4.4rem -0.4rem;
+      padding-top: #{$btnHt}rem;
+      margin: -#{$btnHt}.4rem -0.4rem;
       border-radius: 0.6rem;
       li .btn{
         border-radius: 0;
@@ -457,17 +468,15 @@ body{
 // Tabs
 
 .tbl{
-
   &.Tabs-over{
-    margin-bottom: -4rem;
-    border-bottom:4rem;
+    margin-bottom: -#{$btnHt}rem;
+    border-bottom:#{$btnHt}rem;
     border-style:solid;
     // #FAIRE Should be able to remove this
     transition: max-height 0ms;
     max-height: 0rem;
     overflow: hidden;
     display: block;
-    border-color: $LT2;
     label{
       position: relative;
     }
@@ -477,7 +486,7 @@ body{
     &.open{
       transition: max-height 400ms;
       // display: table;
-      max-height: 40rem;
+      max-height: 1000px;
     }
   }
 
@@ -542,7 +551,7 @@ body{
   
   // These two :after rules are important to ensure that the bottom line doesn't appear at the bottom of the match options
   &:after{
-    top:3.8rem;
+    top:#{$btnHt - 0.2}rem;
     transition: top 0ms;
   }
   input[aria-expanded="true"]{
@@ -553,7 +562,7 @@ body{
       z-index: 14;
     }
     &:after{
-      top:3.6rem !important;
+      top:#{$btnHt - 0.4}rem !important;
       bottom: initial;
       z-index: 15;
     }
@@ -566,21 +575,21 @@ body{
     width: 100%;
     top: 40px;
     left: 0px;
-    margin: -4.4rem -0.4rem 0px;
+    margin: -#{$btnHt}.4rem -0.4rem 0px;
     background-color:$LT4;
     border: 0.4rem solid $LT4;
-    padding-top: 4rem;
+    padding-top: #{$btnHt}rem;
     border-radius: 0.4rem;
     visibility: visible;
     max-height: initial;
     li{
-      height: 4rem;
-      line-height: 4rem;
+      height: #{$btnHt}rem;
+      line-height: #{$btnHt}rem;
 
       margin-top: 0.4rem;
       // padding: 0 1rem;
       &.active .btn{
-        background-color: $prime;
+        background-color: $c_A;
       }
     }
   }

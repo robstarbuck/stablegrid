@@ -1,0 +1,41 @@
+@mixin grad_h($color){
+	background:linear-gradient(to right,  rgba($color,0) 0%,rgba($color,1) 30%,rgba($color,1) 100%);
+}
+
+@mixin c_lighen($color){
+	&.Lgt1-{background-color:mix($color,$Lgt,90%);> .icn{@include grad_h(mix($color,$Lgt,90%));}}
+	&.Lgt2-{background-color:mix($color,$Lgt,80%);> .icn{@include grad_h(mix($color,$Lgt,80%));}}
+	&.Lgt3-{background-color:mix($color,$Lgt,70%);> .icn{@include grad_h(mix($color,$Lgt,70%));}}
+	&.Lgt4-{background-color:mix($color,$Lgt,60%);> .icn{@include grad_h(mix($color,$Lgt,60%));}}
+	&.Lgt5-{background-color:mix($color,$Lgt,50%);> .icn{@include grad_h(mix($color,$Lgt,50%));}}
+	&.Lgt6-{background-color:mix($color,$Lgt,40%);> .icn{@include grad_h(mix($color,$Lgt,40%));}}
+	&.Lgt7-{background-color:mix($color,$Lgt,30%);> .icn{@include grad_h(mix($color,$Lgt,30%));}}
+	&.Lgt8-{background-color:mix($color,$Lgt,20%);> .icn{@include grad_h(mix($color,$Lgt,20%));}}
+	&.Lgt9-{background-color:mix($color,$Lgt,10%);> .icn{@include grad_h(mix($color,$Lgt,10%));}}
+}
+@mixin c_darken($color){
+	&.Drk1-{background-color:mix($color,$Drk,90%);> .icn{@include grad_h(mix($color,$Drk,90%));}}
+	&.Drk2-{background-color:mix($color,$Drk,80%);> .icn{@include grad_h(mix($color,$Drk,80%));}}
+	&.Drk3-{background-color:mix($color,$Drk,70%);> .icn{@include grad_h(mix($color,$Drk,70%));}}
+	&.Drk4-{background-color:mix($color,$Drk,60%);> .icn{@include grad_h(mix($color,$Drk,60%));}}
+	&.Drk5-{background-color:mix($color,$Drk,50%);> .icn{@include grad_h(mix($color,$Drk,50%));}}
+	&.Drk6-{background-color:mix($color,$Drk,40%);> .icn{@include grad_h(mix($color,$Drk,40%));}}
+	&.Drk7-{background-color:mix($color,$Drk,30%);> .icn{@include grad_h(mix($color,$Drk,30%));}}
+	&.Drk8-{background-color:mix($color,$Drk,20%);> .icn{@include grad_h(mix($color,$Drk,20%));}}
+	&.Drk9-{background-color:mix($color,$Drk,10%);> .icn{@include grad_h(mix($color,$Drk,10%));}}
+}
+@mixin c_colorrules($background,$color,$icontext){
+	background-color: $background;
+	color: $color;
+	&:after{
+		background-color: $color;
+	}
+	> .icn{
+		@include grad_h($background);
+		& > span{
+		  color: $icontext;
+		}
+	}
+	@include c_lighen($background);
+	@include c_darken($background);
+}

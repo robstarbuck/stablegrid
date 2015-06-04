@@ -1,40 +1,5 @@
 // the third argument in mix is the amount of the first colour to be included
 
-@mixin grad_h($color){
-	background:linear-gradient(to right,  rgba($color,0) 0%,rgba($color,1) 30%,rgba($color,1) 100%);
-}
-
-@mixin c_lighen($color){
-	&.Lgt1-{background-color:mix($color,$Lgt,90%);> .icn{@include grad_h(mix($color,$Lgt,90%));}}
-	&.Lgt2-{background-color:mix($color,$Lgt,80%);> .icn{@include grad_h(mix($color,$Lgt,80%));}}
-	&.Lgt3-{background-color:mix($color,$Lgt,70%);> .icn{@include grad_h(mix($color,$Lgt,70%));}}
-	&.Lgt4-{background-color:mix($color,$Lgt,60%);> .icn{@include grad_h(mix($color,$Lgt,60%));}}
-	&.Lgt5-{background-color:mix($color,$Lgt,50%);> .icn{@include grad_h(mix($color,$Lgt,50%));}}
-	&.Lgt6-{background-color:mix($color,$Lgt,40%);> .icn{@include grad_h(mix($color,$Lgt,40%));}}
-	&.Lgt7-{background-color:mix($color,$Lgt,30%);> .icn{@include grad_h(mix($color,$Lgt,30%));}}
-	&.Lgt8-{background-color:mix($color,$Lgt,20%);> .icn{@include grad_h(mix($color,$Lgt,20%));}}
-	&.Lgt9-{background-color:mix($color,$Lgt,10%);> .icn{@include grad_h(mix($color,$Lgt,10%));}}
-}
-@mixin c_darken($color){
-	&.Drk1-{background-color:mix($color,$Drk,90%);> .icn{@include grad_h(mix($color,$Drk,90%));}}
-	&.Drk2-{background-color:mix($color,$Drk,80%);> .icn{@include grad_h(mix($color,$Drk,80%));}}
-	&.Drk3-{background-color:mix($color,$Drk,70%);> .icn{@include grad_h(mix($color,$Drk,70%));}}
-	&.Drk4-{background-color:mix($color,$Drk,60%);> .icn{@include grad_h(mix($color,$Drk,60%));}}
-	&.Drk5-{background-color:mix($color,$Drk,50%);> .icn{@include grad_h(mix($color,$Drk,50%));}}
-	&.Drk6-{background-color:mix($color,$Drk,40%);> .icn{@include grad_h(mix($color,$Drk,40%));}}
-	&.Drk7-{background-color:mix($color,$Drk,30%);> .icn{@include grad_h(mix($color,$Drk,30%));}}
-	&.Drk8-{background-color:mix($color,$Drk,20%);> .icn{@include grad_h(mix($color,$Drk,20%));}}
-	&.Drk9-{background-color:mix($color,$Drk,10%);> .icn{@include grad_h(mix($color,$Drk,10%));}}
-}
-
-$Drk:#000000;
-// >
-
-// <
-$Lgt:#FFFCF6;
-
-$c_A:#FF4D00;	
-
 $DK1:mix($Drk,$Lgt,10%);
 $DK2:mix($Drk,$Lgt,20%);
 $DK3:mix($Drk,$Lgt,30%);
@@ -55,23 +20,20 @@ $LT7:mix($Lgt,$Drk,70%);
 $LT8:mix($Lgt,$Drk,80%);
 $LT9:mix($Lgt,$Drk,90%);
 
-$prime:#FF4D00;
-
-$prime_DarkA:mix($LT1,$prime,20%);
-$prime_DarkB:mix($LT1,$prime,40%);
+// $c_A:#FF4D00;
 
 .c_base{
 	background-color:#FFFCF6;	
 }
 .btn{
 	&.c_A,.c_A_ &{
-		background-color:$c_A;
-		color: $Drk;
-		> .icn{
-			@include grad_h($c_A);
-		}
-		@include c_lighen($c_A);
-		@include c_darken($c_A);
+		@include c_colorrules($c_A,$Drk,$Lgt);
+	}
+	&.c_B,.c_B_ &{
+		@include c_colorrules($c_B,$Lgt,$Drk);
+	}
+	&.c_C,.c_C_ &{
+		@include c_colorrules($c_C,$Drk,$Lgt);
 	}
 	&.c_Lgt,.c_Lgt_ &{
 		background-color:$Lgt;
@@ -87,6 +49,13 @@ $prime_DarkB:mix($LT1,$prime,40%);
 		}
 		> .icn{@include grad_h($Drk);}
 		@include c_lighen($Drk);
+	}
+	&.c_Clear,.c_Clear_ &{
+		background-color: transparent !important;
+		border-radius:0 !important;
+		.icn{
+			background: transparent !important;
+		}
 	}
 }
 .o-dropdown.open .dropdown-menu{
@@ -122,13 +91,50 @@ $prime_DarkB:mix($LT1,$prime,40%);
 	}
 }
 
-button.btn{
-	background-color: $prime;
-	color: #000;
+body{
+	background-color: $LT2;
+}
+
+a,button{
+	background-color: $c_A;
+	color: $Drk;
 }
 .icn{
-	background-color: $prime;
-	@include grad_h($prime);
+	background-color: $c_A;
+	@include grad_h($c_A);
+	& > span{
+	  color: $Lgt;
+	}
+}
+.o-dropdown{
+  .dropdown-menu{
+    border: 0.4rem solid mix($c_A,$Drk,80%);
+  }
+}
+.tbl{
+  &.Tabs-over{
+    border-color: $Drk !important;
+    .active{
+      .btn{
+        color: $LT2;
+        background: $LT9;
+        > .icn{
+          @include grad_h($LT9);
+        }
+      }
+    }
+  }
+}
+.Typeahead.o-input{
+  .dropdown-menu{
+    background-color:$LT4;
+    border: 0.4rem solid $LT4;
+    li{
+      &.active .btn{
+        background-color: $c_A;
+      }
+    }
+  }
 }
 .grp{
 	background-color: $LT9;
@@ -136,10 +142,4 @@ button.btn{
 .grp.c_Drk{
 	color:$Lgt;
 	background-color: black;
-}
-.c_Clear .btn{
-	background-color: transparent;
-}
-.c_Clear .btn > .icn{
-	background: transparent;
 }
