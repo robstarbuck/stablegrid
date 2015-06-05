@@ -1,21 +1,11 @@
 {
   "name": "stablegrid",
-  "version": "0.0.3",
-  "main":"stablegrid.min.css",
+  "version": "0.0.4",
   "keywords":["angular","grid","not-bootstrap","angular-ui"],
   "ignore": [
+      ".git",
       ".gitignore",
-      ".jshintignore",
-      ".jshintrc",
-      "_template",
-      "images",
-      "404.html",
-      "index.html",
-      "Gruntfile.js",
-      "bower.json",
-      "gruntfile.js",
-      "package.json",
-      "views"
+      "bower.json"
   ],
   "dependencies": {
     "angular": "^1.3.0",

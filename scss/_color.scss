@@ -26,6 +26,9 @@ $LT9:mix($Lgt,$Drk,90%);
 	background-color:#FFFCF6;	
 }
 .btn{
+	&:after{
+	  background-color: $Drk;
+	}
 	&.c_A,.c_A_ &{
 		@include c_colorrules($c_A,$Drk,$Lgt);
 	}
@@ -64,6 +67,19 @@ $LT9:mix($Lgt,$Drk,90%);
   }
 }
 .o-input{
+	&:after{
+	  background-color: $DK2;
+	}
+	&:hover:after{
+	  background-color: $DK4;
+	}
+	&.focus:hover:after,
+	&.focus:after{
+	  background-color: $DK2;
+	}
+	input{
+		background-color: white;
+	}
 	&.c_Lgt,.c_Lgt_ &{
 		input{
 			background-color:$Lgt;
@@ -81,6 +97,9 @@ $LT9:mix($Lgt,$Drk,90%);
 }
 // Drk2- c_Lgt
 .o-h{
+	&:after{
+	  background-color: $Lgt;
+	}
 	&.c_Drk{
 		h1,h2,h3,h4,h5,h6{
 			color: $Drk;
@@ -91,11 +110,7 @@ $LT9:mix($Lgt,$Drk,90%);
 	}
 }
 
-body{
-	background-color: $LT2;
-}
-
-a,button{
+a.btn,button.btn{
 	background-color: $c_A;
 	color: $Drk;
 }
@@ -114,6 +129,17 @@ a,button{
 .tbl{
   &.Tabs-over{
     border-color: $Drk !important;
+    .active{
+      .btn{
+        color: $LT2;
+        background: $LT9;
+        > .icn{
+          @include grad_h($LT9);
+        }
+      }
+    }
+  }
+  &.Tabs{
     .active{
       .btn{
         color: $LT2;

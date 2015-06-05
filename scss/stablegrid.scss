@@ -21,7 +21,7 @@ $btnHt:5;
 $btnHtSwitchWd:$wdB;
 $btnHtB:7;
 
-@import '../vars.scss';
+@import '../scss-conf/conf.scss';
 
 @import 'mixins.scss';
 
@@ -188,7 +188,6 @@ body{
     cursor: pointer;
   }
   &:after{
-    background-color: black;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -307,9 +306,6 @@ body{
 // Header elements
 .o-h{
   position: relative;
-  &:after{
-    background-color: white;
-  }
   &.FsA{
     height: 6rem;
     h1,h2,h3,h4,h5,h6{
@@ -377,7 +373,6 @@ body{
     display: block;
     width: 100%;
     height: 0px;
-    background-color: $DK2;
     content: ' ';
     position: absolute;
     bottom: 0;
@@ -386,12 +381,10 @@ body{
     transition: height 100ms,background 100ms;
   }
   &:hover:after{
-    background-color: $DK4;
     height: 2px;
   }
   &.focus:hover:after,
   &.focus:after{
-    background-color: $DK2;
     height: 4px;
   }
   input{
@@ -402,7 +395,6 @@ body{
     border: 0;
     outline: 0;
     padding:0 1rem;
-    background-color: white;
     position: relative;
     z-index: 7;
   }
@@ -512,13 +504,8 @@ body{
     .active{
       display: table-cell !important;
       .btn{
-        color: $LT2;
-        background: $LT9;
         label:after{
           content: none;
-        }
-        > .icn{
-          @include grad_h($LT9);
         }
       }
     }
@@ -570,14 +557,11 @@ body{
   .dropdown-menu{
     z-index: 12;
     display: block;
-
     position: absolute;
     width: 100%;
     top: 40px;
     left: 0px;
     margin: -#{$btnHt}.4rem -0.4rem 0px;
-    background-color:$LT4;
-    border: 0.4rem solid $LT4;
     padding-top: #{$btnHt}rem;
     border-radius: 0.4rem;
     visibility: visible;
@@ -585,12 +569,7 @@ body{
     li{
       height: #{$btnHt}rem;
       line-height: #{$btnHt}rem;
-
       margin-top: 0.4rem;
-      // padding: 0 1rem;
-      &.active .btn{
-        background-color: $c_A;
-      }
     }
   }
   &.Hrztal-.o-input .dropdown-menu{
