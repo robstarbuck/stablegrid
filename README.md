@@ -1,4 +1,4 @@
-# Stablegrid
+![StableGrid Logo](https://raw.githubusercontent.com/starbuck451/stablegrid/master/StableGridLogo.png)
 
 A basic grid system for use with AngularJS and AngularUI's Bootstrap directives, it includes styling for:
 
@@ -18,6 +18,6 @@ The following directives must be included as modules for in order to work:
 'ui.bootstrap.typeahead'
 ```
 
-Please take a look in **/Demo/demo.html** to see a working example.
+Please take a look in **/demo/demo.html** to see a working example.
 
 A link to a github page will be available soon.
