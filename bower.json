@@ -1,6 +1,6 @@
 {
   "name": "stablegrid",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main":"stablegrid.min.css",
   "keywords":["angular","grid","not-bootstrap","angular-ui"],
   "ignore": [
