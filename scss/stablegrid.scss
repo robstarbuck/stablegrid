@@ -110,14 +110,6 @@ body{
     float: left;
     width: auto;
   }
-  &.Flr:after,&.Fll:after{
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-  }
   &.Auto{
     width: auto;
   }

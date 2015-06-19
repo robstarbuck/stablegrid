@@ -48,35 +48,35 @@
 
     <div class="o-tbl">
       <div class="tbl">
-        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tble</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tble</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tbl</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="op0-5 cname">.o-tbl</span></div></div>
       </div>
     </div>
 
     <div class="o-tbl SpcA">
       <div class="tbl">
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcA</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcA</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcA</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcA</span></div></div>
       </div>
     </div>
 
     <div class="o-tbl SpcB">
       <div class="tbl">
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcB</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcB</span></div></div>
       </div>
     </div>
 
     <div class="o-tbl SpcC">
       <div class="tbl">
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
-        <div class="cll"><div class="block">Basic <span class="cname">.o-tble.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcC</span></div></div>
+        <div class="cll"><div class="block">Basic <span class="cname">.o-tbl.SpcC</span></div></div>
       </div>
     </div>
 
@@ -206,7 +206,6 @@
         <div class="cll">
           <button class="btn">
             <label>Button <span class="cname">.btn</span></label>
-
           </button>
         </div>
         <div class="cll">
@@ -219,6 +218,15 @@
         <div class="cll">
           <button class="btn">
             <label>Icon (see left) <span class="cname">.btn > .icn</span></label>
+          </button>
+        </div>
+        <div class="cll">
+          <button disabled class="btn Icn">
+          <label>Button <span class="cname">[disabled]</span></label>
+            <div class="icn">
+              <i class="fa fa-lock"></i>
+              <i class="fa fa-unlock"></i>
+            </div>
           </button>
         </div>
       </div>
@@ -811,6 +819,34 @@
     </div>
 
     <div class="o-tbl">
+      <div class="tbl">
+        <div class="cll">
+          <div class="o-input Icn" ng-class="{'focus':fcs2}">
+            <input ng-focus="fcs2=1" ng-blur="fcs2=0" type="text" placeholder=".o-input.Icn > input">
+            <div class="icn clDrk">
+              <i class="fa fa-shield"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl">
+      <div class="tbl">
+        <div class="cll">
+          <div class="o-input Icn" ng-class="{'focus':fcs2}">
+            <input disabled ng-focus="fcs2=1" ng-blur="fcs2=0" type="text" placeholder=".o-input > input[disabled]">
+            <div class="icn clDrk op0-5">
+              <i class="fa fa-lock"></i>
+              <i class="fa fa-check"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="o-tbl">
       <div class="tbl Auto Merge">
         <div class="wd100p cll">
           <div class="o-input" ng-class="{'focus':fcs2}"><input ng-focus="fcs2=1" ng-blur="fcs2=0" type="text" placeholder=".o-input > input"></div>
@@ -830,6 +866,7 @@
         </div>
       </div>
     </div>
+
     <div class="o-tbl c_Lgt_">
       <div class="tbl Auto Merge">
         <div class="cll wd100p">
@@ -876,7 +913,7 @@
 
     <div class="grp c_Drk">
 
-      <button class="btn Tabs-options m_SwtC c_Drk" ng-click="showOtherTabs=!showOtherTabs">
+      <button class="btn Tabs-options m_SwtC c_Drk clLgt" ng-click="showOtherTabs=!showOtherTabs">
         <label>Other Searches</label>
         <div class="icn">
           <i class="fa fa-bars"></i>
@@ -954,7 +991,7 @@
 
 </script>
 
-  <div class="cte WdB" ng-show="viewOptions[11].show">
+  <div class="cte WdB" ng-show="viewOptions[10].show">
 
     <div class="o-h Undrl- FsA">
       <h2>Typeahead</h2>
@@ -989,7 +1026,7 @@
           <div class="o-input Typeahead m_bdL0-2rB" ng-class="{'focus':fcs1}">
             <!-- http://plnkr.co/edit/q0cthGrC7h90GCoMd8ml?p=preview -->
 
-            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | filter:$viewValue | limitTo:8"
+            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | limitTo:8"
               placeholder=".Typeahead.o-input [typeahead]" type="text"
               ng-change="clearModel(selected2)"
               ng-keydown="removeLast($event,selected2)"
@@ -1008,13 +1045,6 @@
           </button>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="cte WdB" ng-show="viewOptions[11].show">
-
-    <div class="o-h Undrl- FsA">
-      <h2>Typeahead Horizontal</h2>
     </div>
 
     <div class="o-tbl m_showB ofH">
@@ -1046,7 +1076,7 @@
           <div class="o-input Hrztal- Typeahead m_bdL0-2rB c_Lgt_" ng-class="{'focus':fcs2}">
             <!-- http://plnkr.co/edit/q0cthGrC7h90GCoMd8ml?p=preview -->
 
-            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | filter:$viewValue | limitTo:8"
+            <input class="form-control" typeahead="place as place.address for place in getLocation($viewValue) | limitTo:8"
               placeholder=".Hrztal-.Typeahead.o-input [typeahead]" type="text"
               ng-change="clearModel(selected)"
               ng-keydown="removeLast($event,selected)"
@@ -1066,5 +1096,209 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="cte WdB" ng-show="viewOptions[11].show">
+    
+    <div class="o-h Undrl- FsA">
+      <h2>Tables</h2>
+    </div>
+
+    <div class="grp c_Lgt">
+
+        <div class="o-table">
+
+          <table>
+            <thead>
+              <tr class="c_Drk">
+                <th class="taLeft"><p class="fwBold">Key <span class="cname">.c_Drk</span></p></th>
+                <th class="taLeft">
+                  <p class="fwBold">Value <span class="cname">.c_Drk</span></p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr btn-checkbox ng-model="y2015">
+                <td><p>Row Key 01 <span class="cname">tr[btn-checkbox] </span></p></td>
+                <td class="Icn">
+                  <p>Row Value 01 <span class="cname">tr[btn-checkbox] .Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-check-square"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr btn-checkbox ng-model="y2016">
+                <td><p>Row Key 02 <span class="cname">tr[btn-checkbox] </span></p></td>
+                <td class="Icn">
+                  <p>Row Value 02 <span class="cname">tr[btn-checkbox] .Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-check-square"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr btn-checkbox ng-model="y2017">
+                <td><p>Row Key 03 <span class="cname">tr[btn-checkbox] </span></p></td>
+                <td class="Icn">
+                  <p>Row Value 03 <span class="cname">tr[btn-checkbox] .Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square-o"></i>
+                    <i class="fa fa-check-square"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+  
+        <div class="o-table RowFix_">
+
+          <table>
+            <thead>
+              <tr class="c_Drk" btn-checkbox ng-model="week">
+                <th class="Icn" colspan="7">
+                  <p class="fwBold">Column <span class="cname">.c_Drk .Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square"></i>
+                  </div>
+                </th>
+              </tr>
+
+            </thead>
+              <tbody>
+              <tr>
+                <td btn-checkbox ng-model="cell1" class="Icn">
+                  <p>Mon <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Tue" class="Icn">
+                  <p>Tue <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Wed" class="Icn">
+                  <p>Wed <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Thu" class="Icn">
+                  <p>Thu <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Fri" class="Icn">
+                  <p>Fri <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Sat" class="Icn">
+                  <p>Sat <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Sun" class="Icn">
+                  <p>Sun <span class="cname">td[btn-checkbox].Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="o-table RowFix_ mgB0">
+
+          <table>
+            <thead>
+              <tr class="c_Drk" btn-checkbox ng-model="week">
+                <th class="Icn" colspan="7">
+                  <p class="fwBold">Column, Icon only<span class="cname">.c_Drk .Icn</span></p>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square"></i>
+                  </div>
+                </th>
+              </tr>
+
+            </thead>
+              <tbody>
+              <tr>
+                <td btn-checkbox ng-model="cell1" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Tue" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Wed" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Thu" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Fri" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Sat" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+                <td btn-checkbox ng-model="Sun" class="Center- Icn">
+                  <span class="cname flR">.Center-.Icn</span>
+                  <div class="icn">
+                    <i class="fa fa-square"></i>
+                    <i class="fa fa-check-square clA"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+
+      </div>
+
   </div>
 </div>
