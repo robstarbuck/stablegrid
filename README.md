@@ -2,7 +2,7 @@
 
 #StableGrid
 
-A basic grid system for use with AngularJS and AngularUI's Bootstrap directives, it includes styling for:
+A basic grid system and Bootstrap alternative for use with AngularJS and AngularUI's Bootstrap directives, it includes styling for:
 
 * Buttons
 * Dropdown
@@ -10,7 +10,7 @@ A basic grid system for use with AngularJS and AngularUI's Bootstrap directives,
 
 You will find the AngularUI project here [AngularUI's version of Bootstrap](https://angular-ui.github.io/#ui-bootstrap).
 
-Please note that StableGrid uses AngularUI - **0.13.0**, which at the time of writing (_2015-06-02_) was only available as a snapshot.
+**!Important** Uses AngularUI - **0.13.0**, which at the time of writing (_2015-06-02_) was only available as a snapshot.
 
 The following directives must be included as modules for in order to work:
 
@@ -19,5 +19,13 @@ The following directives must be included as modules for in order to work:
 'ui.bootstrap.buttons',
 'ui.bootstrap.typeahead'
 ```
+
+Stablegrid can be installed with Bower
+
+```sh
+bower install stablegrid
+```
+
+Optionally the SASS files have been included in the **/scss** directory, configuration options are included in **/scss-conf**.
 
 A [Demo](http://starbuck451.github.io/stablegrid/#/) of the grid can be found here.
