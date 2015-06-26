@@ -29,3 +29,7 @@ bower install stablegrid
 Optionally the SASS files have been included in the **/scss** directory, configuration options are included in **/scss-conf**.
 
 A [Demo](http://starbuck451.github.io/stablegrid/#/) of the grid can be found here.
+
+---
+
+A 'Lite' version of Stablegrid without any of the directive dependencies can also be found [here](https://github.com/starbuck451/stablegrid-lite):
