@@ -28,7 +28,7 @@ bower install stablegrid
 
 Optionally the SASS files have been included in the **/scss** directory, configuration options are included in **/scss-conf**.
 
-A [Demo](http://ouinon.github.io/stablegrid/#/) of the grid can be found here.
+A [Demo](https://robstarbuck.github.io/stablegrid/#/) of the grid can be found here.
 
 ---
 
